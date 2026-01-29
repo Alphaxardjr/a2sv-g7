@@ -14,7 +14,7 @@ total_money = 0
 for i in range(1,w+1):
     total_money += i*k
     
-if n>total_money:
+if n>=total_money:
     print(0)
 else:
     print(total_money-n)
