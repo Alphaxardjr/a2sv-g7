@@ -1,0 +1,16 @@
+class Solution:
+    def countVowelSubstrings(self, word: str) -> int:
+        vowels = set("aeiou")
+        n = len(word)
+        res = 0
+        for i in range(n):
+            if word[i] not in vowels:
+                continue
+            seen = set()
+            for j in range(i, n):
+                if word[j] not in vowels:
+                    break
+                seen.add(word[j])
+                if len(seen) == 5:
+                    res += 1
+        return res
