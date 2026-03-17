@@ -5,7 +5,6 @@ def longest_good_segment():
     l = 0
     current_sum = 0
     max_len = 0
-    
     for r in range(n):
         current_sum += arr[r]
         
